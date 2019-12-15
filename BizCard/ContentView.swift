@@ -8,9 +8,37 @@
 
 import SwiftUI
 
+
+
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            VStack(){
+                CircleImage(imageName: "Batman-de-Justice-League-en-Arrowverse")
+                Text("Batman")
+                .font(.title)
+                .foregroundColor(.white)
+                
+                Text("batman.com")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                
+                HStack(){
+                    Image(systemName: "t.square.fill")
+                        .foregroundColor(.white)
+                    Text(": @buldappswithme")
+                        .font(.subheadline)
+                        .foregroundColor(Color.white)
+                        .bold()
+                        .italic()
+                }
+            }
+        }.frame(width: 350, height: 200)
+        .background(Color.orange)
+        .cornerRadius(8)
+        .shadow(radius: 5)
+                    
     }
 }
 
